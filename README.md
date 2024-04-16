@@ -69,11 +69,9 @@ Aquí hay otro ejemplo de construcción de un árbol de búsqueda binaria.
 ### Implementaciones de funciones
 
 Le sugerimos implementar las siguientes funciones en el siguiente orden:
-* crear_bst
+* create_bst
 * bst_free - Piensa en qué recorrido DFS usarías para liberar el árbol.
 * bst_add
-* Luego sus diversas funciones de impresión.
-
 
 Recuerde, el más simple árbol  suele ser 3, 2, 4, lo que generaría el siguiente árbol:<center>
 
