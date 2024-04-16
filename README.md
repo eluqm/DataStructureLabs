@@ -4,6 +4,12 @@ For this homework, you will explore writing a Binary Search Tree, along with som
 utility functions for the tree. You will also explore the concept of
 recursion, and how it can be used to simplify your code.
 
+# Laboratorio - Árboles de búsqueda binaria
+
+Para esta tarea, explorarás cómo escribir un árbol de búsqueda binaria, junto con algunos
+Funciones de utilidad para el árbol. También explorarás el concepto de
+recursividad y cómo se puede utilizar para simplificar el código.
+
 ## Provided Files
 This project has a number of provided files. We split up your "implementation" code so it 
 looks more like a standard c program.  The files we provided are:
