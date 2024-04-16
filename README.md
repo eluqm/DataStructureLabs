@@ -17,7 +17,7 @@ parezca más a un programa C estándar. Los archivos que proporcionamos son:
 
 
 ## Árbol de búsqueda binaria (BST)
-Como recordatorio, en un BST, el hijo izquierdo de un nodo siempre es menor que el padre y el hijo derecho siempre es mayor que el padre. Esto le permite buscar en el árbol en tiempo O(log n), que es mucho más rápido que una lista vinculada.
+Como recordatorio, en un BST, el hijo izquierdo de un nodo siempre es menor que el padre y el hijo derecho siempre es mayor que el padre. Esto le permite buscar en el árbol en tiempo O(log n), que es mucho más rápido que una lista enlazada.
 
 Si bien técnicamente solo necesitas un nodo para crear un árbol completo, en este laboratorio usamos dos estructuras proporcionadas.
 
@@ -38,12 +38,9 @@ typedef struct tree
 ```
 
 En su mayor parte, BST es lo que está "expuesto" al resto del programa, pero las funciones que manipulan el árbol directamente lo harán.
-Lo más probable es que sean funciones auxiliares que no están expuestas al resto del programa. Por ejemplo, cuando usted
-llame a `bst_add`, puede llamar a `bst_add_helper` para realizar el trabajo real de agregar el nodo al árbol más allá del nodo raíz. Este es un patrón común.
+Lo más probable es que sean funciones auxiliares que no están expuestas al resto del programa. 
 
-
-👉🏽 **Task** 👈🏽 Each function has comments above it documenting what it does, your task is to fully implement every provided
-function, while adding additional helper functions as you need.
+👉🏽 **Tarea** 👈🏽 Cada función tiene comentarios encima que documentan lo que hace, su tarea es implementar completamente todo lo proporcionado, mientras agrega funciones auxiliares adicionales según sea necesario.
 
 ### Entendiendo BST
 
@@ -56,13 +53,8 @@ Puede resultar útil echar un vistazo a algunas animaciones sobre cómo implemen
 
 </center>
 
-For the add operation, you will be traversing the tree. As you traverse, you will compare the current element you are iterating with the element you would like to add. If it is less than or equal to the current element, you will move left. If it is greater, than you will move right. If it is equal, you won't add it, based on our definition that there should be no duplicates in the tree.
 
-There is an edge case that the very first node you add to a tree will become the root.
-
-Here is another sample construction of a binary search tree tree.
-
-Para la función bst_add, atravesará el árbol. A medida que recorra, comparará el elemento actual que está iterando con el elemento que le gustaría agregar. Si es menor o igual que el elemento actual, te moverás hacia la izquierda. Si es mayor, te moverás hacia la derecha. Si es igual, no lo agregará, según nuestra definición de que no debe haber duplicados en el árbol.
+Para la función bst_add, recorrerá el árbol. A medida que recorra, comparará el elemento actual que está iterando con el elemento que le gustaría agregar. Si es menor o igual que el elemento actual, te moverás hacia la izquierda. Si es mayor, te moverás hacia la derecha. Si es igual, no lo agregará, según nuestra definición de que no debe haber duplicados en el árbol.
 
 Existe un caso extremo en el que el primer nodo que agregue a un árbol se convertirá en la raíz.
 
