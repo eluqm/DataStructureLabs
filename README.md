@@ -1,18 +1,12 @@
-# Homework 10 - Binary Search Trees
+# Laboratorio - Árboles de búsqueda binaria (Parte01)
 
-For this homework, you will explore writing a Binary Search Tree, along with some
-utility functions for the tree. You will also explore the concept of
-recursion, and how it can be used to simplify your code.
-
-# Laboratorio - Árboles de búsqueda binaria
-
-Para esta tarea, explorarás cómo escribir un árbol de búsqueda binaria, junto con algunos
+Para esta tarea, explorarás cómo escribir un árbol de búsqueda binaria, junto con algunas
 Funciones de utilidad para el árbol. También explorarás el concepto de
 recursividad y cómo se puede utilizar para simplificar el código.
 
-## Provided Files
-This project has a number of provided files. We split up your "implementation" code so it 
-looks more like a standard c program.  The files we provided are:
+## Archivos proporcionados
+Este proyecto tiene varios archivos proporcionados. Dividimos el código de "implementación" para que
+parezca más a un programa C estándar. Los archivos que proporcionamos son:
 
 * [my_bst.h](../my_bst.h) - This is the header file for your bst.  It contains the function prototypes for the functions you will implement.
 * [my_bst.c](../my_bst.c) - This is the implementation file for your bst.  It contains the function definitions for the functions you will implement related to the **structure** of the bst.
@@ -23,12 +17,14 @@ looks more like a standard c program.  The files we provided are:
 * [Makefile](../Makefile) - This is the makefile for your program. You should not need to modify this file, but you should look at it to see how it compiles all the files. As a reminder from the lab, to build your program, use "make" in the directory with the Makefile.  To clean up your directory, use "make clean".
 
 
-👉🏽 **Task** 👈🏽 Take time to go through the files. They should compile without  modification at this point. You will want to take this project in steps, so as you look through the files, make sure to plan out your approach to building the BST. 
+ 
+👉🏽 **Tarea** 👈🏽 Tómate el tiempo para revisar los archivos. Deberían compilarse sin modificaciones en este punto. Querrá realizar este proyecto en pasos, así que mientras revisa los archivos, asegúrese de planificar su enfoque para construir el BST.
 
-## Binary Search Tree (BST)
-As a reminder, a BST the left child of a node is always less than the parent, and the right child is always greater than the parent.  This allows you to search the tree in O(log n) time, which is much faster than a linked list.  You can read more about BSTs [here](https://en.wikipedia.org/wiki/Binary_search_tree).
 
-While you technically only need a single node to make an entire tree, this program makes use of two provided structures.
+## Árbol de búsqueda binaria (BST)
+Como recordatorio, en un BST, el hijo izquierdo de un nodo siempre es menor que el padre y el hijo derecho siempre es mayor que el padre. Esto le permite buscar en el árbol en tiempo O(log n), que es mucho más rápido que una lista vinculada.
+
+Si bien técnicamente solo necesitas un nodo para crear un árbol completo, en este laboratorio usamos dos estructuras proporcionadas.
 
 ```c
 typedef struct Node
@@ -46,17 +42,17 @@ typedef struct tree
 } BST;
 ```
 
-For the most part, BST is what is "exposed" to the rest of the program, but the functions that manipulate the tree directly will
-more than likely be helper functions that are not exposed to the rest of the program.  For example, when you 
-call `bst_add`, it may call `bst_add_helper` to do the actual work of adding the node to the tree beyond the root node.  This is a common pattern.
+En su mayor parte, BST es lo que está "expuesto" al resto del programa, pero las funciones que manipulan el árbol directamente lo harán.
+Lo más probable es que sean funciones auxiliares que no están expuestas al resto del programa. Por ejemplo, cuando usted
+llame a `bst_add`, puede llamar a `bst_add_helper` para realizar el trabajo real de agregar el nodo al árbol más allá del nodo raíz. Este es un patrón común.
 
 
 👉🏽 **Task** 👈🏽 Each function has comments above it documenting what it does, your task is to fully implement every provided
 function, while adding additional helper functions as you need.
 
-### Understanding BST
+### Entendiendo BST
 
-It can be helpful to take a look at a few animations for how to implement each of the operations. Also make sure to check the resources for a link to an interactive BST. 
+Puede resultar útil echar un vistazo a algunas animaciones sobre cómo implementar cada una de las operaciones. También asegúrese de consultar los recursos para obtener un enlace a un BST interactivo.
 
 #### bst_add
 <center>
@@ -70,6 +66,12 @@ For the add operation, you will be traversing the tree. As you traverse, you wil
 There is an edge case that the very first node you add to a tree will become the root.
 
 Here is another sample construction of a binary search tree tree.
+
+Para la función bst_add, atravesará el árbol. A medida que recorra, comparará el elemento actual que está iterando con el elemento que le gustaría agregar. Si es menor o igual que el elemento actual, te moverás hacia la izquierda. Si es mayor, te moverás hacia la derecha. Si es igual, no lo agregará, según nuestra definición de que no debe haber duplicados en el árbol.
+
+Existe un caso extremo en el que el primer nodo que agregue a un árbol se convertirá en la raíz.
+
+Aquí hay otro ejemplo de construcción de un árbol de búsqueda binaria.
 
 <center>
 
@@ -133,14 +135,10 @@ AG - Auto-graded
 MG - Manually graded
 
 
-## 📚 Resources
+## 📚 Recursos
 * [Binary Search Tree](https://en.wikipedia.org/wiki/Binary_search_tree)
 * [Visual Go](https://visualgo.net/en/bst)
 * [Geeks for Geeks Binary Search Tree](https://www.geeksforgeeks.org/binary-search-tree-data-structure/)
 * [Program Wiz BST](https://www.programiz.com/dsa/binary-search-tree)
 
-**Your most important resource?** - A pencil and paper (or similar). Draw out what you are accomplishing based on given inputs. This will help you understand what you are trying to accomplish, and how to accomplish it.
 
-
-Note: A number of resources use insert for add, and they talk about deleting nodes. For your implementation you do
-not have to worry about deleting a node, but you can if you want to. Exists is similar to find/search, just that it returns a boolean. Your version should not balance the tree, so if someone adds 1, 2, 3, 4, 5 - it would be a very one sided tree. 
