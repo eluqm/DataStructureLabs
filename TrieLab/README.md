@@ -84,4 +84,5 @@ TrieNode* trie = make_trienode('\0');
     trie = insert_trie(trie, "hi");
     trie = insert_trie(trie, "teabag");
     trie = insert_trie(trie, "teacan");
+print_trie(root);
 ```
