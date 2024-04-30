@@ -34,4 +34,16 @@ Nota: que en B-Trees prácticos, el valor del orden mínimo es mucho más que 5.
 ![B-tree Add](output253.png)
 
 </center>
+👉🏽 En este laboratorio usamos la siguiente estructura proporcionada👈🏽
+```c
+#define MAX_KEYS 4
+
+struct BTreeNode {
+  int num_keys;
+  int keys[MAX_KEYS];
+  struct BTreeNode *children[MAX_KEYS + 1];
+};
+
+```
+
 
