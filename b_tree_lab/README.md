@@ -35,6 +35,7 @@ Nota: que en B-Trees prácticos, el valor del orden mínimo es mucho más que 5.
 
 </center>
 👉🏽 En este laboratorio usamos la siguiente estructura proporcionada👈🏽
+
 ```c
 #define MAX_KEYS 4
 
@@ -45,5 +46,26 @@ struct BTreeNode {
 };
 
 ```
+👉🏽 **Tarea** 👈🏽 ENTIENDA Y EXPLIQUE, su tarea es ENTENDER completamente todo lo proporcionado.
+### Implementaciones de funciones
+
+Le sugerimos ENTENDER las siguientes funciones en el siguiente orden:
+* createNode():
+```c
+struct BTreeNode *createNode() {
+  struct BTreeNode *newNode =
+      (struct BTreeNode *)malloc(sizeof(struct BTreeNode));
+  if (newNode == NULL) {
+    printf("La asignación de memoria falló.\n");
+    exit(1);
+  }
+  newNode->num_keys = 0;
+  for (int i = 0; i < MAX_KEYS + 1; i++) {
+    newNode->children[i] = NULL;
+  }
+  return newNode;
+}
+```
+
 
 
