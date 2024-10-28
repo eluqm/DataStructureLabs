@@ -148,8 +148,11 @@ void insertKey(struct BTreeNode *node, int key) {
 ```
 
 ## 👉🏽 **Tarea** 👈🏽:
-pruebe el funcionamiento del arbol insertando la siguiente secuencia de datos(IMPLEMENTE EL MAIN):
-[ 30, 7, 17,10, 20, 5, 6, 12,0,678,234,567]
+pruebe el funcionamiento del árbol insertando los valores que se encuentran en el siguiente link:
+[Dataset 1000000 llaves](https://drive.google.com/file/d/1_yXLn8DpLl20b2c-8Fyq89BmHv73UcsK/view?usp=drive_link) 
 
+# Laboratorio - B-tree (Parte02)
+## 👉🏽 **Tarea** 👈🏽:
+implementar y realizar un informe sobre la comparación experimental de los tiempos de ejecución cuando usamos diferentes valores de B, osea la variable "MAX", MAX=2 Y MAX=3 , por ejemplo cuanto demora la carga de datos, cuando tiempo demora buscar la misma llave en los tres árboles.
 
 
