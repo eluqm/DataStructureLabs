@@ -17,13 +17,13 @@ parezca más a un programa C estándar (PUEDE TOMAR COMO REFERENCIA EL LABORATOR
 ## Árbol B-tree
 Propiedades del B-Tree:
 * Todos las hojas están en el mismo nivel.
-* El B-Tree está definido por el término grado mínimo ‘t‘.
-* Cada nodo excepto el raíz debe contener al menos t-1 llaves. La raíz puede contener un mínimo de 1 llave.
-* Todos los nodos (incluida la raíz) pueden contener como máximo (2*t – 1) llaves.
+* El B-Tree está definido por el término grado mínimo ‘b‘.
+* Cada nodo excepto el raíz debe contener al menos b-1 llaves. La raíz puede contener un mínimo de 1 llave.
+* Todos los nodos (incluida la raíz) pueden contener como máximo (2*b – 1) llaves.
 * El número de hijos de un nodo es igual al número de llaves en él más 1.
 * Todas las llaves de un nodo están ordenadas en orden creciente. El hijo entre dos llaves k1 y k2 contiene todas las llaves en el rango de k1 y k2.
 * El B-Tree crece y se reduce desde la raíz, a diferencia del Árbol de Búsqueda Binaria. Los Árboles de Búsqueda Binaria crecen hacia abajo y también se reducen hacia abajo.
-* Al igual que otros Árboles de Búsqueda Binaria equilibrados, la complejidad temporal para buscar, insertar y eliminar es O(log n).
+* Al igual que otros Árboles de Búsqueda Binaria equilibrados, la complejidad temporal para buscar, insertar y eliminar es O(logb n).
 * La inserción de un nodo en un B-Tree ocurre solo en un nodo hoja.
 
 A continuación se muestra un ejemplo de un B-Tree de orden mínimo 5.
@@ -153,6 +153,6 @@ pruebe el funcionamiento del árbol insertando los valores que se encuentran en 
 
 # Laboratorio - B-tree (Parte02)
 ## 👉🏽 **Tarea** 👈🏽:
-implementar y realizar un informe sobre la comparación experimental de los tiempos de ejecución cuando usamos diferentes valores de B, osea la variable "MAX", MAX=2 Y MAX=3 , por ejemplo cuanto demora la carga de datos, cuando tiempo demora buscar la misma llave en los tres árboles.
+implementar y realizar un informe sobre la comparación experimental de los tiempos de ejecución cuando usamos diferentes valores de B, osea la variable "MAX_KEYS", MAX_KEYS=2 Y MAX_KEYS=3 , por ejemplo cuanto demora la carga de datos, cuando tiempo demora buscar la misma llave en los tres árboles.
 
 
